@@ -1,0 +1,17 @@
+<DOCUMENT filename="base.html">
+  {% load static %}
+  {% block head %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/common.css' %}" />
+  {% endblock %}
+
+  <body>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      © {{ now.year }} My portfolio
+    </footer>
+  </body>
+</DOCUMENT>

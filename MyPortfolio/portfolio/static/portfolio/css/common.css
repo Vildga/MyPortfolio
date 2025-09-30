@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9 url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Ccircle cx="10" cy="10" r="5" fill="%23e0e0e0"/%3E%3Cpolygon points="20,20 25,15 30,20" fill="%23e0e0e0"/%3E%3C/svg%3E') repeat;
+    text-align: center;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+    font-size: 24px;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #666;
+}
+
+.social-icons a:hover {
+    color: #007BFF;
+}
+
+.profile {
+    margin-top: 50px;
+}
+
+.profile h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.profile p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background: #6a0dad url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Ccircle cx="50" cy="50" r="40" fill="%23fff"/%3E%3Cpath d="M50 20 C40 30, 60 30, 50 40 C40 50, 60 50, 50 60 C40 70, 60 70, 50 80" fill="%23ff0"/%3E%3C/svg%3E') no-repeat center;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}

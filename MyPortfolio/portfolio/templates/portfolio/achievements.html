@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Достижения{% endblock %}
+{% block content %}
+<h2>Мои достижения</h2>
+<div class="achievements">
+  {% for ach in achievements %}
+  <div class="achievement-card">
+    <h3>{{ ach.title }} ({{ ach.date }})</h3>
+    <p>{{ ach.description }}</p>
+    {% if ach.certificate %}
+    <a href="{{ ach.certificate.url }}" target="_blank">Сертификат</a>
+    {% endif %}
+  </div>
+  {% empty %}
+  <p>Пока достижений нет.</p>
+  {% endfor %}
+</div>
+{% endblock %}

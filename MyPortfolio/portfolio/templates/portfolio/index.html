@@ -1,0 +1,29 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+    <header>
+        <div class="logo">OD</div>
+        <nav>
+            <a href="#about">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#events">Events</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </header>
+    <main>
+        <section class="profile">
+            <h1>Oleksii Drozd</h1>
+            <p>I am a Python back-end developer with skills in building robust and scalable web applications.
+                I specialize in Django, PostgreSQL, Docker, Redis, and have experience in developing projects such as Instagram apps, real-time weather services, and Telegram bots.
+I enjoy solving complex problems, designing system architectures, and optimizing performance.</p>
+            <div class="avatar"></div>
+        </section>
+    </main>
+{% endblock %}
