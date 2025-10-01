@@ -1,6 +1,6 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
-{% block title %}Главная{% endblock %}
+{% block title %}Home{% endblock %}
 {% block content %}
     <header>
         <div class="logo">OD</div>
@@ -8,8 +8,8 @@
             <a href="#about">About me</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#events">Events</a>
+            <a href="#experience">Achievements</a>
+            <a href="#certificates">Certificates</a>
         </nav>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -18,12 +18,116 @@
         </div>
     </header>
     <main>
-        <section class="profile">
+        <section class="profile" id="about">
             <h1>Oleksii Drozd</h1>
-            <p>I am a Python back-end developer with skills in building robust and scalable web applications.
-                I specialize in Django, PostgreSQL, Docker, Redis, and have experience in developing projects such as Instagram apps, real-time weather services, and Telegram bots.
-I enjoy solving complex problems, designing system architectures, and optimizing performance.</p>
-            <div class="avatar"></div>
+            <p>I am a Python back-end developer with skills in building robust and scalable web applications. I specialize in Django, PostgreSQL, Docker, Redis, and have experience in developing projects such as Instagram apps, real-time weather services, and Telegram bots. I enjoy solving complex problems, designing system architectures, and optimizing performance. I participated in DOU Day 2025 and contests like Zavtra.UA, enhancing my teamwork and leadership skills.</p>
+            <div class="avatar">
+                <img src="{% static 'portfolio/images/my_photo.jpg' %}" alt="Profile Photo" class="avatar-img">
+            </div>
+        </section>
+
+        <!-- Rest of the content remains unchanged -->
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Back-end Development</h3>
+                    <p>Building robust server-side logic, APIs, and database management.</p>
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Front-end Development</h3>
+                    <p>Creating responsive and interactive user interfaces.</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>DevOps & Tools</h3>
+                    <p>Managing deployment, scaling, and documentation of applications.</p>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Docker Compose</li>
+                        <li>Redis</li>
+                        <li>Nginx</li>
+                        <li>Swagger</li>
+                        <li>OAuth (Google, GitHub)</li>
+                        <li>AIogram</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="{% static 'portfolio/cv/cv.pdf' %}" class="view-cv-btn" target="_blank">View my CV</a>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <p>Have a look at some of my recent projects I'm proud of.</p>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-icon" style="background-color: #FFC107;"></div>
+                    <h3>DjangoGram</h3>
+                    <p>An Instagram-like app with features for following users, uploading photos, and reacting to images with likes or dislikes.</p>
+                    <p><strong>Technologies:</strong> EC2 AWS, S3 AWS, Django, Social Auth, PostgreSQL</p>
+                    <a href="#" class="view-project-btn">View project</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon" style="background-color: #3F51B5;"></div>
+                    <h3>Weather</h3>
+                    <p>A weather website offering real-time updates and subscription options for city forecasts, delivered via email or site notifications.</p>
+                    <p><strong>Technologies:</strong> EC2 AWS, Django, Django Webpush, Celery, Social Auth, Webpack, JWT, Redis, PostgreSQL, Swagger</p>
+                    <a href="#" class="view-project-btn">View project</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon" style="background-color: #F44336;"></div>
+                    <h3>Finance Manager</h3>
+                    <p>A tool to track income and expenses, display statistics, and view history, deployed on a server with registration (including Google OAuth) and SSL. Accessible at <a href="https://vildga.ddns.net/" target="_blank">https://vildga.ddns.net/</a>.</p>
+                    <p><strong>Technologies:</strong> Django, PostgreSQL, Docker, Nginx, SSL</p>
+                    <a href="https://vildga.ddns.net/" class="view-project-btn" target="_blank">View project</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements" id="experience">
+            <h2>Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎤</div>
+                    <h3>DOU Day 2025</h3>
+                    <p>Participation in the largest technical conference for the Ukrainian IT community (Kyiv, May 16-17, 2025). Attended sessions, panels, and workshops on development trends.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">💻</div>
+                    <h3>Onix Systems Contest 2023</h3>
+                    <p>Participation in a university-organized contest to develop a website for a game, supported by Onix Systems developers, emphasizing teamwork.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Konkurs Zavtra.UA 2025</h3>
+                    <p>Advanced to the 3rd stage of the Viktor Pinchuk Foundation scholarship program (project and leadership evaluation), organized through the university.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificates" id="certificates">
+            <h2>Certificates</h2>
+            <p>Here are my certifications that validate my skills and learning journey.</p>
+            <div class="certificates-container">
+                <div class="certificate-card">
+                    <div class="certificate-icon">📜</div>
+                    <h3>Web Development Certificate</h3>
+                    <p>Awarded for completing a comprehensive course on web development, covering HTML, CSS, JavaScript, and more.</p>
+                    <a href="https://drive.google.com/file/d/1efsOGcwSM3LvF1Dkj_6cICo6GWlUZPw1/view" class="view-certificate-btn" target="_blank">View Certificate</a>
+                </div>
+            </div>
         </section>
     </main>
 {% endblock %}
